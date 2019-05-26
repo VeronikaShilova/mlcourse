@@ -1,14 +1,3 @@
-'''
-This is a template for your reproducible solution in the Medium competition.
-It's obligatory that your script produces a submission file just 
-by running `python kaggle_medium_<name>_<surname>_solution.py`. 
-If you have any dependecies apart from those in a Kaggle Docker image, 
-it's your responsibility to provide an image (or at least a requirements file) 
-to reproduce your solution.
-
-Please avoid heavy hyperparameter optimization in this script. 
-'''
-
 import os
 import numpy as np
 import pandas as pd
@@ -259,6 +248,3 @@ with timer('Prepare submission'):
     ridge_pred = ridge_pred + MEAN_TEST_TARGET - y_train.mean()
     submission_df['log_recommends'] = ridge_pred
     submission_df.to_csv(f'submission_medium_{AUTHOR}.csv')
-
-
-
